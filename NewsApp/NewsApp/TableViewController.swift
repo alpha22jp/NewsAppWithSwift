@@ -25,9 +25,10 @@ class TableViewController: UITableViewController {
         
         self.tableView.registerNib(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "FeedTableViewCell")
         
-        Alamofire.request(.GET, fetchFrom).responseObject("responseData") { (response: Alamofire.Response<FeedResponse, NSError>) in
+        Alamofire.request(.GET, fetchFrom).responseObject("responseData.feed") { (response: Alamofire.Response<Feed, NSError>) in
             
-            guard let entries = response.result.value?.feed?.entries else {
+            guard let entries = response.result.value?.entries else {
+                print("Feed response error")
                 return
             }
             

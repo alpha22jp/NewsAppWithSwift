@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         // Array to keep track of controllers in page menu
         var controllerArray : [UIViewController] = []
         
-        var feeds: [Dictionary<String, String>] =
+        let feeds: [Dictionary<String, String>] =
         [
             [
                 "link": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://menthas.com/top/rss",
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         
         // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
         // Example:
-        var parameters: [CAPSPageMenuOption] = [
+        let parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor.whiteColor()),
             .SelectionIndicatorColor(UIColor.clearColor()),
             .ViewBackgroundColor(UIColor.whiteColor()),

@@ -26,11 +26,8 @@
 		68CFB67C1C34D98C00E8B742 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CFB67A1C34D98C00E8B742 /* FeedTableViewCell.xib */; };
 		68CFB67E1C34DD4200E8B742 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFB67D1C34DD4200E8B742 /* Article.swift */; };
 		68CFB6841C351D8900E8B742 /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68CFB6821C351D8900E8B742 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		68CFB6871C351F5600E8B742 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFB6861C351F5600E8B742 /* FeedResponse.swift */; };
 		68CFB6891C35206700E8B742 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CFB6881C35206700E8B742 /* ObjectMapper.framework */; };
 		68CFB68B1C3523DA00E8B742 /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFB68A1C3523DA00E8B742 /* ResponseData.swift */; };
-		68CFB68D1C35247800E8B742 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFB68C1C35247800E8B742 /* Feed.swift */; };
-		68CFB68F1C3524A500E8B742 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFB68E1C3524A500E8B742 /* Entry.swift */; };
 		68CFB69C1C354AAD00E8B742 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68CFB69A1C354AAD00E8B742 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		68CFB69D1C354AAD00E8B742 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68CFB69B1C354AAD00E8B742 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -85,11 +82,8 @@
 		68CFB67A1C34D98C00E8B742 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		68CFB67D1C34DD4200E8B742 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		68CFB6821C351D8900E8B742 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
-		68CFB6861C351F5600E8B742 /* FeedResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
 		68CFB6881C35206700E8B742 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		68CFB68A1C3523DA00E8B742 /* ResponseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
-		68CFB68C1C35247800E8B742 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
-		68CFB68E1C3524A500E8B742 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		68CFB69A1C354AAD00E8B742 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		68CFB69B1C354AAD00E8B742 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,11 +177,8 @@
 				68CFB6761C34D52B00E8B742 /* TableViewController.xib */,
 				68CFB6791C34D98C00E8B742 /* FeedTableViewCell.swift */,
 				68CFB67A1C34D98C00E8B742 /* FeedTableViewCell.xib */,
-				68CFB6861C351F5600E8B742 /* FeedResponse.swift */,
 				6822A0A41C3577AC00E90869 /* OGPResponse.swift */,
 				68CFB68A1C3523DA00E8B742 /* ResponseData.swift */,
-				68CFB68C1C35247800E8B742 /* Feed.swift */,
-				68CFB68E1C3524A500E8B742 /* Entry.swift */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -328,10 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68CFB68F1C3524A500E8B742 /* Entry.swift in Sources */,
 				689E1DB71BF4EAE7009D5D02 /* ViewController.swift in Sources */,
-				68CFB68D1C35247800E8B742 /* Feed.swift in Sources */,
-				68CFB6871C351F5600E8B742 /* FeedResponse.swift in Sources */,
 				689E1DB51BF4EAE7009D5D02 /* AppDelegate.swift in Sources */,
 				6822A0A51C3577AC00E90869 /* OGPResponse.swift in Sources */,
 				68CFB67E1C34DD4200E8B742 /* Article.swift in Sources */,
@@ -523,6 +511,7 @@
 				6891BA421C510ED800D5E464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		689E1DAC1BF4EAE7009D5D02 /* Build configuration list for PBXProject "NewsApp" */ = {
 			isa = XCConfigurationList;

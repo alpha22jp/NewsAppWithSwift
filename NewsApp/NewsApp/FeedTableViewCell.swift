@@ -19,14 +19,15 @@ class FeedTableViewCell: UITableViewCell {
     
     var link: String! {
         didSet {
-            Alamofire.request(.GET, ArticleAPI.ogpImage + link).responseObject("") { (response: Response<OGPResponse, NSError>) in
-                var imageUrl: NSURL?
-                let ogpResponse = response.result.value
-                if let ogpImgSrc = ogpResponse?.image {
-                        imageUrl = NSURL(string: ogpImgSrc)
-//                        print(imageUrl)
-                        self.setThumbnailWithFadeInAnimation(imageUrl)
+            Alamofire.request(.GET, ArticleAPI.ogpImage + link).responseObject("") {
+                (response: Response<OGPResponse, NSError>) in
+                guard let ogpImgSrc = response.result.value?.image else {
+                    print("Image response error")
+                    return
                 }
+                let imageUrl = NSURL(string: ogpImgSrc)
+                print(imageUrl)
+                self.setThumbnailWithFadeInAnimation(imageUrl)
             }
         }
     }
@@ -49,15 +50,13 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     func setThumbnailWithFadeInAnimation(imageUrl: NSURL!){
-        self.thumbnailImageView.loadWebImage(imageUrl, placeholderImage: nil, completeion: {
-            (image, error, cacheType, url) ->Void in
+        self.thumbnailImageView.loadWebImage(imageUrl, placeholderImage: nil) {
+            (image, error, cacheType, url) in
             self.thumbnailImageView.alpha = 0
-            
-            UIView.animateWithDuration(0.25,
-                animations: {
-                    self.thumbnailImageView.alpha = 1
-            })
-        })
+            UIView.animateWithDuration(0.25) {
+                self.thumbnailImageView.alpha = 1
+            }
+        }
     }
     
 }
